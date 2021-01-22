@@ -14,7 +14,7 @@ void __attribute__ ((constructor)) init(){
     printf("init()\n");
 }
 
-int main() {
+int main(int argc, char *argv[]){
   char *ptr = malloc(256);
   qdbp_trap(ptr[123], callback, ptr);
   ptr[123] = 'e';
